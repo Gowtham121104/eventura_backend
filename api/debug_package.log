@@ -1,0 +1,20 @@
+Request received at: 2025-12-26 16:17:36
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"0123654789","duration":"Full day","estimated_price":250000.0,"event_date":"2025-12-10","event_name":"","event_time":"18.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Grand Ballroom - Marriott Hotel"}
+Request received at: 2025-12-26 16:30:29
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"9384742451","duration":"Full day","estimated_price":600000.0,"event_date":"2025-12-31","event_name":"","event_time":"04.00","event_type":"Package","guest_count":250,"package_name":"Diamond Dream Wedding","preferred_contact_method":"PHONE","special_requirements":"Welcome drink required","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Community Hall - Riverside"}
+Request received at: 2025-12-29 03:53:03
+Raw input: {"customer_email":"d@gmail.com","customer_name":"Dhan","customer_phone":"9638520741","duration":"Full day","estimated_price":80000.0,"event_date":"2026-01-23","event_name":"","event_time":"15.00","event_type":"Package","guest_count":90,"package_name":"Team Building Event","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Beach Resort - Coastal Paradise"}
+Request received at: 2025-12-29 03:53:08
+Raw input: {"customer_email":"d@gmail.com","customer_name":"Dhan","customer_phone":"9638520741","duration":"Full day","estimated_price":80000.0,"event_date":"2026-01-23","event_name":"","event_time":"15.00","event_type":"Package","guest_count":90,"package_name":"Team Building Event","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Beach Resort - Coastal Paradise"}
+Request received at: 2025-12-29 03:53:15
+Raw input: {"customer_email":"d@gmail.com","customer_name":"Dhan","customer_phone":"9638520741","duration":"Full day","estimated_price":80000.0,"event_date":"2026-01-23","event_name":"","event_time":"15.00","event_type":"Package","guest_count":90,"package_name":"Team Building Event","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Beach Resort - Coastal Paradise"}
+Request received at: 2025-12-29 04:07:17
+Raw input: 
+Request received at: 2025-12-29 04:09:48
+Raw input: 
+Request received at: 2025-12-29 04:12:30
+Raw input: {"customer_email":"d@gmail.com","customer_name":"dhan","customer_phone":"9638520741","duration":"Full day","estimated_price":120000.0,"event_date":"2026-01-09","event_name":"","event_time":"17.00","event_type":"Package","guest_count":500,"package_name":"Professional Seminar Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Conference Center - Business District"}
+Request received at: 2025-12-29 04:32:39
+Raw input: {"customer_email":"a@gmail.com","customer_name":"a","customer_phone":"9638520741","duration":"Full day","estimated_price":150000.0,"event_date":"2026-01-01","event_name":"","event_time":"16.00","event_type":"Package","guest_count":0,"package_name":"Corporate Conference Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Conference Center - Business District"}
+Request received at: 2025-12-29 04:36:27
+Raw input: {"customer_email":"a@gmail.com","customer_name":"a","customer_phone":"9638520741","duration":"Full day","estimated_price":120000.0,"event_date":"2026-01-02","event_name":"","event_time":"17.00","event_type":"Package","guest_count":0,"package_name":"Professional Seminar Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Beach Resort - Coastal Paradise"}
