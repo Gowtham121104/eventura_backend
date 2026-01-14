@@ -1,13 +1,12 @@
 <?php
 class PackageBooking {
     private $conn;
-    private $table_name = "package_bookings";
+    private $table_name = "bookings"; // ✅ FIXED
 
     // Booking properties
     public $id;
     public $user_id;
     public $vendor_id;
-    public $package_id;
     public $package_name;
     public $vendor_name;
     public $event_type;
@@ -25,7 +24,7 @@ class PackageBooking {
     public $special_requirements;
     public $estimated_price;
     public $booking_reference;
-    public $booking_status;
+    public $status; // ✅ FIXED (was booking_status)
     public $created_at;
 
     public function __construct($db) {
@@ -34,15 +33,33 @@ class PackageBooking {
 
     // Create new package booking
     public function create() {
+
         // Generate unique booking reference
         $this->booking_reference = 'PKG-' . strtoupper(uniqid());
-        $this->booking_status = 'pending';
+        $this->status = 'pending';
+
+        // ✅ SAFETY DEFAULTS (PREVENT DB FAILURES)
+        $this->event_name = !empty($this->event_name)
+            ? $this->event_name
+            : $this->package_name;
+
+        $this->alternate_phone = !empty($this->alternate_phone)
+            ? $this->alternate_phone
+            : $this->customer_phone;
+
+        $this->preferred_contact_method = !empty($this->preferred_contact_method)
+            ? $this->preferred_contact_method
+            : 'phone';
+
+        $this->special_requirements = $this->special_requirements ?? '';
+
+        $this->guest_count = max(1, (int)$this->guest_count);
 
         $query = "INSERT INTO " . $this->table_name . "
                 SET
+                    booking_reference = :booking_reference,
                     user_id = :user_id,
                     vendor_id = :vendor_id,
-                    package_id = :package_id,
                     package_name = :package_name,
                     vendor_name = :vendor_name,
                     event_type = :event_type,
@@ -59,51 +76,62 @@ class PackageBooking {
                     preferred_contact_method = :preferred_contact_method,
                     special_requirements = :special_requirements,
                     estimated_price = :estimated_price,
-                    booking_reference = :booking_reference,
-                    booking_status = :booking_status,
+                    status = :status,
                     created_at = NOW()";
 
-        $stmt = $this->conn->prepare($query);
+        try {
+            $stmt = $this->conn->prepare($query);
 
-        // Sanitize inputs
-        $this->user_id = htmlspecialchars(strip_tags($this->user_id));
-        $this->vendor_id = htmlspecialchars(strip_tags($this->vendor_id));
-        $this->package_name = htmlspecialchars(strip_tags($this->package_name));
-        $this->vendor_name = htmlspecialchars(strip_tags($this->vendor_name));
-        $this->event_type = htmlspecialchars(strip_tags($this->event_type));
-        $this->customer_name = htmlspecialchars(strip_tags($this->customer_name));
-        $this->customer_phone = htmlspecialchars(strip_tags($this->customer_phone));
-        $this->customer_email = htmlspecialchars(strip_tags($this->customer_email));
-        $this->venue = htmlspecialchars(strip_tags($this->venue));
-        $this->booking_reference = htmlspecialchars(strip_tags($this->booking_reference));
+            // Sanitize inputs
+            $this->user_id = htmlspecialchars(strip_tags($this->user_id));
+            $this->vendor_id = htmlspecialchars(strip_tags($this->vendor_id));
+            $this->package_name = htmlspecialchars(strip_tags($this->package_name));
+            $this->vendor_name = htmlspecialchars(strip_tags($this->vendor_name));
+            $this->event_type = htmlspecialchars(strip_tags($this->event_type));
+            $this->event_name = htmlspecialchars(strip_tags($this->event_name));
+            $this->customer_name = htmlspecialchars(strip_tags($this->customer_name));
+            $this->customer_phone = htmlspecialchars(strip_tags($this->customer_phone));
+            $this->customer_email = htmlspecialchars(strip_tags($this->customer_email));
+            $this->alternate_phone = htmlspecialchars(strip_tags($this->alternate_phone));
+            $this->preferred_contact_method = htmlspecialchars(strip_tags($this->preferred_contact_method));
+            $this->special_requirements = htmlspecialchars(strip_tags($this->special_requirements));
+            $this->venue = htmlspecialchars(strip_tags($this->venue));
+            $this->booking_reference = htmlspecialchars(strip_tags($this->booking_reference));
 
-        // Bind values
-        $stmt->bindParam(":user_id", $this->user_id);
-        $stmt->bindParam(":vendor_id", $this->vendor_id);
-        $stmt->bindParam(":package_id", $this->package_id);
-        $stmt->bindParam(":package_name", $this->package_name);
-        $stmt->bindParam(":vendor_name", $this->vendor_name);
-        $stmt->bindParam(":event_type", $this->event_type);
-        $stmt->bindParam(":event_name", $this->event_name);
-        $stmt->bindParam(":event_date", $this->event_date);
-        $stmt->bindParam(":event_time", $this->event_time);
-        $stmt->bindParam(":duration", $this->duration);
-        $stmt->bindParam(":venue", $this->venue);
-        $stmt->bindParam(":guest_count", $this->guest_count);
-        $stmt->bindParam(":customer_name", $this->customer_name);
-        $stmt->bindParam(":customer_phone", $this->customer_phone);
-        $stmt->bindParam(":customer_email", $this->customer_email);
-        $stmt->bindParam(":alternate_phone", $this->alternate_phone);
-        $stmt->bindParam(":preferred_contact_method", $this->preferred_contact_method);
-        $stmt->bindParam(":special_requirements", $this->special_requirements);
-        $stmt->bindParam(":estimated_price", $this->estimated_price);
-        $stmt->bindParam(":booking_reference", $this->booking_reference);
-        $stmt->bindParam(":booking_status", $this->booking_status);
+            // Bind values
+            $stmt->bindParam(":booking_reference", $this->booking_reference);
+            $stmt->bindParam(":user_id", $this->user_id);
+            $stmt->bindParam(":vendor_id", $this->vendor_id);
+            $stmt->bindParam(":package_name", $this->package_name);
+            $stmt->bindParam(":vendor_name", $this->vendor_name);
+            $stmt->bindParam(":event_type", $this->event_type);
+            $stmt->bindParam(":event_name", $this->event_name);
+            $stmt->bindParam(":event_date", $this->event_date);
+            $stmt->bindParam(":event_time", $this->event_time);
+            $stmt->bindParam(":duration", $this->duration);
+            $stmt->bindParam(":venue", $this->venue);
+            $stmt->bindParam(":guest_count", $this->guest_count);
+            $stmt->bindParam(":customer_name", $this->customer_name);
+            $stmt->bindParam(":customer_phone", $this->customer_phone);
+            $stmt->bindParam(":customer_email", $this->customer_email);
+            $stmt->bindParam(":alternate_phone", $this->alternate_phone);
+            $stmt->bindParam(":preferred_contact_method", $this->preferred_contact_method);
+            $stmt->bindParam(":special_requirements", $this->special_requirements);
+            $stmt->bindParam(":estimated_price", $this->estimated_price);
+            $stmt->bindParam(":status", $this->status);
 
-        // Execute query
-        if ($stmt->execute()) {
-            $this->id = $this->conn->lastInsertId();
-            return $this->booking_reference;
+            if ($stmt->execute()) {
+                $this->id = $this->conn->lastInsertId();
+                return $this->booking_reference;
+            }
+
+        } catch (PDOException $e) {
+            // 🔒 Log error safely
+            file_put_contents(
+                'debug_package.log',
+                "DB ERROR: " . $e->getMessage() . "\n",
+                FILE_APPEND
+            );
         }
 
         return false;
@@ -137,7 +165,6 @@ class PackageBooking {
         if ($row) {
             $this->user_id = $row['user_id'];
             $this->vendor_id = $row['vendor_id'];
-            $this->package_id = $row['package_id'];
             $this->package_name = $row['package_name'];
             $this->vendor_name = $row['vendor_name'];
             $this->event_type = $row['event_type'];
@@ -155,7 +182,7 @@ class PackageBooking {
             $this->special_requirements = $row['special_requirements'];
             $this->estimated_price = $row['estimated_price'];
             $this->booking_reference = $row['booking_reference'];
-            $this->booking_status = $row['booking_status'];
+            $this->status = $row['status'];
             $this->created_at = $row['created_at'];
             return true;
         }
@@ -166,22 +193,18 @@ class PackageBooking {
     // Update booking status
     public function updateStatus() {
         $query = "UPDATE " . $this->table_name . "
-                SET booking_status = :booking_status
+                SET status = :status
                 WHERE id = :id";
 
         $stmt = $this->conn->prepare($query);
 
-        $this->booking_status = htmlspecialchars(strip_tags($this->booking_status));
+        $this->status = htmlspecialchars(strip_tags($this->status));
         $this->id = htmlspecialchars(strip_tags($this->id));
 
-        $stmt->bindParam(':booking_status', $this->booking_status);
+        $stmt->bindParam(':status', $this->status);
         $stmt->bindParam(':id', $this->id);
 
-        if ($stmt->execute()) {
-            return true;
-        }
-
-        return false;
+        return $stmt->execute();
     }
 
     // Delete booking
@@ -192,11 +215,7 @@ class PackageBooking {
         $this->id = htmlspecialchars(strip_tags($this->id));
         $stmt->bindParam(":id", $this->id);
 
-        if ($stmt->execute()) {
-            return true;
-        }
-
-        return false;
+        return $stmt->execute();
     }
 }
 ?>

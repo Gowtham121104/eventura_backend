@@ -1,7 +1,7 @@
 <?php
 // Database configuration
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'eventura_db');
+define('DB_NAME', 'eventura_db_v2');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 

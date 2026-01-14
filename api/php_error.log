@@ -1,0 +1,91 @@
+[07-Jan-2026 09:03:22 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking_reference' in 'field list' in C:\xampp\htdocs\eventura_api\models\Booking.php:93
+Stack trace:
+#0 C:\xampp\htdocs\eventura_api\models\Booking.php(93): PDOStatement->execute()
+#1 C:\xampp\htdocs\eventura_api\api\create_booking.php(108): Booking->create()
+#2 {main}
+  thrown in C:\xampp\htdocs\eventura_api\models\Booking.php on line 93
+[09-Jan-2026 06:39:43 Europe/Berlin] Database error in get_bookings.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.package_id' in 'field list'
+[09-Jan-2026 08:14:51 Europe/Berlin] Database error in get_bookings.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.total_amount' in 'field list'
+[09-Jan-2026 08:14:52 Europe/Berlin] Database error in get_bookings.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.total_amount' in 'field list'
+[09-Jan-2026 08:14:53 Europe/Berlin] Database error in get_bookings.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.total_amount' in 'field list'
+[09-Jan-2026 08:14:53 Europe/Berlin] Database error in get_bookings.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'b.total_amount' in 'field list'
+[12-Jan-2026 18:17:37 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:17:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:17:37 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:17:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:17:37 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:17:37 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:17:51 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[12-Jan-2026 18:17:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[12-Jan-2026 18:17:54 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:17:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:17:57 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:17:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:18:46 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:18:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:18:46 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:18:46 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:19:25 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[12-Jan-2026 18:19:25 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[12-Jan-2026 18:19:38 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[12-Jan-2026 18:19:38 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[12-Jan-2026 18:20:16 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:20:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:20:40 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:20:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:20:42 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[12-Jan-2026 18:20:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[12-Jan-2026 18:20:44 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:20:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_organizer_stats.php on line 35
+[12-Jan-2026 18:28:03 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[12-Jan-2026 18:28:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[12-Jan-2026 18:28:06 Europe/Berlin] PHP Warning:  require_once(C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[12-Jan-2026 18:28:06 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\xampp\htdocs\eventura_api\api\admin/../auth/organizer_auth.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php:35
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35

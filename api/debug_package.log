@@ -18,3 +18,53 @@ Request received at: 2025-12-29 04:32:39
 Raw input: {"customer_email":"a@gmail.com","customer_name":"a","customer_phone":"9638520741","duration":"Full day","estimated_price":150000.0,"event_date":"2026-01-01","event_name":"","event_time":"16.00","event_type":"Package","guest_count":0,"package_name":"Corporate Conference Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Conference Center - Business District"}
 Request received at: 2025-12-29 04:36:27
 Raw input: {"customer_email":"a@gmail.com","customer_name":"a","customer_phone":"9638520741","duration":"Full day","estimated_price":120000.0,"event_date":"2026-01-02","event_name":"","event_time":"17.00","event_type":"Package","guest_count":0,"package_name":"Professional Seminar Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Beach Resort - Coastal Paradise"}
+Request received at: 2026-01-07 16:36:48
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"1593574560","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-16","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+Request received at: 2026-01-07 16:36:51
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"1593574560","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-16","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+Request received at: 2026-01-07 16:51:13
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"1593574560","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-16","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+Request received at: 2026-01-07 16:53:55
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"1593574560","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-16","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+Request received at: 2026-01-07 17:01:33
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"1593574560","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-16","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+DB ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'package_name' in 'field list'
+Request received at: 2026-01-07 18:25:55
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"1593574560","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-16","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+DB ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'package_name' in 'field list'
+Request received at: 2026-01-07 18:32:29
+Raw input: 
+Request received at: 2026-01-07 18:32:59
+Raw input: 
+Request received at: 2026-01-07 18:33:22
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"1593574560","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-16","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+DB ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'package_name' in 'field list'
+Request received at: 2026-01-07 18:36:50
+Raw input: 
+Request received at: 2026-01-07 18:36:52
+Raw input: 
+Request received at: 2026-01-07 18:36:52
+Raw input: 
+Request received at: 2026-01-07 18:36:58
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"1593574560","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-16","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+DB ERROR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'package_name' in 'field list'
+Request received at: 2026-01-07 18:42:33
+Raw input: 
+Request received at: 2026-01-07 18:42:41
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"1593574560","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-16","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+Request received at: 2026-01-07 18:44:40
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"1593574560","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-16","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+Request received at: 2026-01-07 18:53:10
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gokul","customer_phone":"9630125478","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-10","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+Request received at: 2026-01-07 19:00:17
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gokul","customer_phone":"9630125478","duration":"Full day","estimated_price":250000.0,"event_date":"2026-01-10","event_name":"","event_time":"15.00","event_type":"Package","guest_count":0,"package_name":"Classic Gold Wedding Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Rooftop Lounge - City View"}
+Request received at: 2026-01-08 19:27:50
+Raw input: {"customer_email":"ash@gmail.com","customer_name":"Ashwin","customer_phone":"1593574560","duration":"Full day","estimated_price":85000.0,"event_date":"2026-01-23","event_name":"","event_time":"14.00","event_type":"Package","guest_count":0,"package_name":"Themed Party Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Luxury Villa - Hill Station"}
+Request received at: 2026-01-09 04:31:15
+Raw input: {"customer_email":"muthu@gmail.com","customer_name":"Muthu","customer_phone":"9631478520","duration":"Full day","estimated_price":120000.0,"event_date":"2026-01-29","event_name":"","event_time":"17.00","event_type":"Package","guest_count":150,"package_name":"Luxury Birthday Extravaganza","preferred_contact_method":"PHONE","special_requirements":"Neatly decorated","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Conference Center - Business District"}
+Request received at: 2026-01-09 08:20:30
+Raw input: {"customer_email":"gowth@gmail.com","customer_name":"Gowthi","customer_phone":"9361472580","duration":"Full day","estimated_price":90000.0,"event_date":"2026-01-31","event_name":"","event_time":"15.00","event_type":"Package","guest_count":75,"package_name":"Corporate Networking Event","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Beach Resort - Coastal Paradise"}
+Request received at: 2026-01-09 17:52:13
+Raw input: {"customer_email":"vj@gmail.com","customer_name":"vijay","customer_phone":"9874102563","duration":"Full day","estimated_price":150000.0,"event_date":"2026-01-29","event_name":"","event_time":"17.30","event_type":"Package","guest_count":0,"package_name":"Corporate Conference Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Conference Center - Business District"}
+Request received at: 2026-01-14 14:33:20
+Raw input: {"customer_email":"hari@gmail.com","customer_name":"hari","customer_phone":"1245789630","duration":"Full day","estimated_price":100000.0,"event_date":"2026-01-23","event_name":"","event_time":"15.30","event_type":"Package","guest_count":0,"package_name":"Premium Party Package","preferred_contact_method":"PHONE","special_requirements":"","user_id":1,"vendor_id":1,"vendor_name":"Dream Events","venue":"Garden Pavilion - Central Park"}

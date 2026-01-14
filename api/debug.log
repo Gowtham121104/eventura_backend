@@ -4,3 +4,111 @@ Request received at: 2025-12-26 10:09:44
 Raw input: {"customer_email":"b@gmail.com","customer_name":"ygy","customer_phone":"0321456987","duration":"4-8 hours","estimated_price":22500.0,"event_date":"2024-12-25","event_name":"cfcf","event_time":"16:00:00","event_type":"BIRTHDAY","guest_count":54,"preferred_contact_method":"PHONE","service_name":"Photography","user_id":1,"vendor_id":1,"vendor_name":"Pixel Perfect Photography","venue":"dttf"}
 Request received at: 2025-12-26 16:33:11
 Raw input: {"alternate_phone":"9894345935","customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"9384742451","duration":"6-8 hours","estimated_price":937.5,"event_date":"2024-12-25","event_name":"Get together","event_time":"17:00:00","event_type":"PARTY","guest_count":100,"preferred_contact_method":"PHONE","service_name":"Catering","special_requirements":"Video Is also required","user_id":1,"vendor_id":1,"vendor_name":"Royal Feast Caterers","venue":"AGS"}
+Request received at: 2026-01-07 08:10:09
+Raw input: {"customer_email":"Gwt@gmail.com","customer_name":"Gowtham","customer_phone":"7419635208","duration":"4-8 hours","estimated_price":20700.0,"event_date":"2026-01-24","event_name":"Anniversary","event_time":"19:00:00","event_type":"PARTY","guest_count":50,"preferred_contact_method":"PHONE","service_name":"DJ/Music","user_id":1,"vendor_id":1,"vendor_name":"Beat Masters DJ","venue":"VGP"}
+Request received at: 2026-01-07 08:17:52
+Raw input: {"customer_email":"Gwt@gmail.com","customer_name":"Gowtham","customer_phone":"7419635208","duration":"4-8 hours","estimated_price":20700.0,"event_date":"2026-01-24","event_name":"Anniversary","event_time":"19:00:00","event_type":"PARTY","guest_count":50,"preferred_contact_method":"PHONE","service_name":"DJ/Music","user_id":1,"vendor_id":1,"vendor_name":"Beat Masters DJ","venue":"VGP"}
+Request received at: 2026-01-07 08:19:27
+Raw input: {"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"7410852963","duration":"4-8 hours","estimated_price":24300.0,"event_date":"2026-01-24","event_name":"Graduation","event_time":"20:00:00","event_type":"PARTY","guest_count":500,"preferred_contact_method":"PHONE","service_name":"DJ/Music","user_id":1,"vendor_id":1,"vendor_name":"Beat Masters DJ","venue":"VGP"}
+Request received at: 2026-01-07 08:41:22
+Raw input: {"customer_email":"g@gmail.com","customer_name":"gowtham","customer_phone":"9638520741","duration":"4-8 hours","estimated_price":18750.0,"event_date":"2026-01-24","event_name":"Event","event_time":"20:00:00","event_type":"CORPORATE","guest_count":100,"preferred_contact_method":"PHONE","service_name":"DJ/Music","user_id":1,"vendor_id":1,"vendor_name":"Sound Wave Entertainment","venue":"AGS"}
+Request received at: 2026-01-07 09:03:22
+Raw input: {"customer_email":"g@gmail.com","customer_name":"gowtham","customer_phone":"9638520741","duration":"4-8 hours","estimated_price":18750.0,"event_date":"2026-01-24","event_name":"Event","event_time":"20:00:00","event_type":"CORPORATE","guest_count":100,"preferred_contact_method":"PHONE","service_name":"DJ/Music","user_id":1,"vendor_id":1,"vendor_name":"Sound Wave Entertainment","venue":"AGS"}
+Request received at: 2026-01-07 09:48:58
+Raw input: {"customer_email":"g@gmail.com","customer_name":"gowtham","customer_phone":"9638520741","duration":"4-8 hours","estimated_price":18750.0,"event_date":"2026-01-24","event_name":"Event","event_time":"20:00:00","event_type":"CORPORATE","guest_count":100,"preferred_contact_method":"PHONE","service_name":"DJ/Music","user_id":1,"vendor_id":1,"vendor_name":"Sound Wave Entertainment","venue":"AGS"}
+[14-Jan-2026 12:31:36 Europe/Berlin] Error in update_booking_status.php: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'eventura_db_v2.user_tokens' doesn't exist
+[14-Jan-2026 12:34:39 Europe/Berlin] Error in update_booking_status.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'u.user_type' in 'field list'
+[14-Jan-2026 12:42:44 Europe/Berlin] Transaction error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'changed_by' cannot be null
+[14-Jan-2026 12:42:44 Europe/Berlin] Error in update_booking_status.php: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'changed_by' cannot be null
+[14-Jan-2026 12:45:01 Europe/Berlin] Transaction error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking_id' in 'field list'
+[14-Jan-2026 12:45:01 Europe/Berlin] Error in update_booking_status.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking_id' in 'field list'
+[14-Jan-2026 13:55:43 Europe/Berlin] === Update Booking Status Request Start ===
+[14-Jan-2026 13:55:43 Europe/Berlin] User authenticated: ID=5, Type=organizer, OrganizerID=
+[14-Jan-2026 13:55:43 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":11,"remarks":"Approved"}
+[14-Jan-2026 13:55:43 Europe/Berlin] Booking ID: 11, Action: APPROVE
+[14-Jan-2026 13:55:43 Europe/Berlin] Booking found: Status=PENDING
+[14-Jan-2026 13:55:43 Europe/Berlin] Approved by: 5
+[14-Jan-2026 13:55:43 Europe/Berlin] Transaction started
+[14-Jan-2026 13:55:43 Europe/Berlin] New status: CONFIRMED
+[14-Jan-2026 13:55:43 Europe/Berlin] Booking updated successfully
+[14-Jan-2026 13:55:43 Europe/Berlin] History logged successfully
+[14-Jan-2026 13:55:43 Europe/Berlin] Transaction error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking_id' in 'field list'
+[14-Jan-2026 13:55:43 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\eventura_api\api\admin\update_booking_status.php(206): PDOStatement->execute()
+#1 {main}
+[14-Jan-2026 13:55:43 Europe/Berlin] Error in update_booking_status.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking_id' in 'field list'
+[14-Jan-2026 13:55:43 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\eventura_api\api\admin\update_booking_status.php(206): PDOStatement->execute()
+#1 {main}
+[14-Jan-2026 14:03:51 Europe/Berlin] === Update Booking Status Request Start ===
+[14-Jan-2026 14:03:51 Europe/Berlin] User authenticated: ID=5, Type=organizer, OrganizerID=
+[14-Jan-2026 14:03:51 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":11,"remarks":"Approved"}
+[14-Jan-2026 14:03:51 Europe/Berlin] Booking ID: 11, Action: APPROVE
+[14-Jan-2026 14:03:51 Europe/Berlin] Booking found: Status=PENDING
+[14-Jan-2026 14:03:51 Europe/Berlin] Approved by: 5
+[14-Jan-2026 14:03:51 Europe/Berlin] Transaction started
+[14-Jan-2026 14:03:51 Europe/Berlin] New status: CONFIRMED
+[14-Jan-2026 14:03:51 Europe/Berlin] Booking updated successfully
+[14-Jan-2026 14:03:51 Europe/Berlin] History logged successfully
+[14-Jan-2026 14:03:51 Europe/Berlin] Transaction error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking_id' in 'field list'
+[14-Jan-2026 14:03:51 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\eventura_api\api\admin\update_booking_status.php(206): PDOStatement->execute()
+#1 {main}
+[14-Jan-2026 14:03:51 Europe/Berlin] Error in update_booking_status.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking_id' in 'field list'
+[14-Jan-2026 14:03:51 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\eventura_api\api\admin\update_booking_status.php(206): PDOStatement->execute()
+#1 {main}
+[14-Jan-2026 14:03:55 Europe/Berlin] === Update Booking Status Request Start ===
+[14-Jan-2026 14:03:55 Europe/Berlin] User authenticated: ID=5, Type=organizer, OrganizerID=
+[14-Jan-2026 14:03:55 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":11,"remarks":"Approved"}
+[14-Jan-2026 14:03:55 Europe/Berlin] Booking ID: 11, Action: APPROVE
+[14-Jan-2026 14:03:55 Europe/Berlin] Booking found: Status=PENDING
+[14-Jan-2026 14:03:55 Europe/Berlin] Approved by: 5
+[14-Jan-2026 14:03:55 Europe/Berlin] Transaction started
+[14-Jan-2026 14:03:55 Europe/Berlin] New status: CONFIRMED
+[14-Jan-2026 14:03:55 Europe/Berlin] Booking updated successfully
+[14-Jan-2026 14:03:55 Europe/Berlin] History logged successfully
+[14-Jan-2026 14:03:55 Europe/Berlin] Transaction error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking_id' in 'field list'
+[14-Jan-2026 14:03:55 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\eventura_api\api\admin\update_booking_status.php(206): PDOStatement->execute()
+#1 {main}
+[14-Jan-2026 14:03:55 Europe/Berlin] Error in update_booking_status.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking_id' in 'field list'
+[14-Jan-2026 14:03:55 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\eventura_api\api\admin\update_booking_status.php(206): PDOStatement->execute()
+#1 {main}
+[14-Jan-2026 14:04:16 Europe/Berlin] === Update Booking Status Request Start ===
+[14-Jan-2026 14:04:16 Europe/Berlin] User authenticated: ID=5, Type=organizer, OrganizerID=
+[14-Jan-2026 14:04:16 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":11,"remarks":"Approved"}
+[14-Jan-2026 14:04:16 Europe/Berlin] Booking ID: 11, Action: APPROVE
+[14-Jan-2026 14:04:16 Europe/Berlin] Booking found: Status=PENDING
+[14-Jan-2026 14:04:16 Europe/Berlin] Approved by: 5
+[14-Jan-2026 14:04:16 Europe/Berlin] Transaction started
+[14-Jan-2026 14:04:16 Europe/Berlin] New status: CONFIRMED
+[14-Jan-2026 14:04:16 Europe/Berlin] Booking updated successfully
+[14-Jan-2026 14:04:16 Europe/Berlin] History logged successfully
+[14-Jan-2026 14:04:16 Europe/Berlin] Transaction error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking_id' in 'field list'
+[14-Jan-2026 14:04:16 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\eventura_api\api\admin\update_booking_status.php(206): PDOStatement->execute()
+#1 {main}
+[14-Jan-2026 14:04:16 Europe/Berlin] Error in update_booking_status.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'booking_id' in 'field list'
+[14-Jan-2026 14:04:16 Europe/Berlin] Stack trace: #0 C:\xampp\htdocs\eventura_api\api\admin\update_booking_status.php(206): PDOStatement->execute()
+#1 {main}
+[14-Jan-2026 14:10:25 Europe/Berlin] === Update Booking Status Request Start ===
+[14-Jan-2026 14:10:25 Europe/Berlin] User authenticated: ID=5, Type=organizer, OrganizerID=
+[14-Jan-2026 14:10:25 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":11,"remarks":"Approved"}
+[14-Jan-2026 14:10:25 Europe/Berlin] Booking ID: 11, Action: APPROVE
+[14-Jan-2026 14:10:25 Europe/Berlin] Booking found: Status=PENDING
+[14-Jan-2026 14:10:25 Europe/Berlin] Approved by: 5
+[14-Jan-2026 14:10:25 Europe/Berlin] Transaction started
+[14-Jan-2026 14:10:25 Europe/Berlin] New status: CONFIRMED
+[14-Jan-2026 14:10:25 Europe/Berlin] Booking updated successfully
+[14-Jan-2026 14:10:25 Europe/Berlin] History logged successfully
+[14-Jan-2026 14:10:25 Europe/Berlin] Notification created successfully
+[14-Jan-2026 14:10:25 Europe/Berlin] Transaction committed
+[14-Jan-2026 14:10:25 Europe/Berlin] Response: {"success":true,"message":"Booking CONFIRMED successfully","data":{"id":11,"status":"CONFIRMED"}}
+[14-Jan-2026 14:10:39 Europe/Berlin] === Update Booking Status Request Start ===
+[14-Jan-2026 14:10:39 Europe/Berlin] User authenticated: ID=5, Type=organizer, OrganizerID=
+[14-Jan-2026 14:10:39 Europe/Berlin] Raw input: {"action":"REJECT","booking_id":3,"rejection_reason":"Outside service area"}
+[14-Jan-2026 14:10:39 Europe/Berlin] Booking ID: 3, Action: REJECT
+[14-Jan-2026 14:10:39 Europe/Berlin] Booking found: Status=PENDING
+[14-Jan-2026 14:10:39 Europe/Berlin] Approved by: 5
+[14-Jan-2026 14:10:39 Europe/Berlin] Transaction started
+[14-Jan-2026 14:10:39 Europe/Berlin] New status: REJECTED
+[14-Jan-2026 14:10:39 Europe/Berlin] Booking updated successfully
+[14-Jan-2026 14:10:39 Europe/Berlin] History logged successfully
+[14-Jan-2026 14:10:39 Europe/Berlin] Notification created successfully
+[14-Jan-2026 14:10:39 Europe/Berlin] Transaction committed
+[14-Jan-2026 14:10:39 Europe/Berlin] Response: {"success":true,"message":"Booking REJECTED successfully","data":{"id":3,"status":"REJECTED"}}
