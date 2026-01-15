@@ -96,37 +96,39 @@ if (
 ) {
 
     // ✅ Use authenticated user ID
-    $packageBooking->user_id = $userId;
-    $packageBooking->vendor_id = (int)$data->vendor_id;
+    // ✅ Use authenticated user ID as client_id
+$packageBooking->client_id = $userId;  // ✅ The logged-in client
+$packageBooking->user_id = !empty($data->user_id) ? (int)$data->user_id : $userId;  // ✅ Organizer/vendor
+$packageBooking->vendor_id = (int)$data->vendor_id;
 
-    $packageBooking->package_name = $data->package_name;
-    $packageBooking->vendor_name = $data->vendor_name;
-    $packageBooking->event_type = $data->event_type ?? 'wedding';
-    $packageBooking->event_name = !empty($data->event_name)
-        ? $data->event_name
-        : $data->package_name;
+$packageBooking->package_name = $data->package_name;
+$packageBooking->vendor_name = $data->vendor_name;
+$packageBooking->event_type = $data->event_type ?? 'wedding';
+$packageBooking->event_name = !empty($data->event_name)
+    ? $data->event_name
+    : $data->package_name;
 
-    $packageBooking->event_date = $data->event_date;
-    $packageBooking->event_time = $normalizedEventTime;
-    $packageBooking->duration = $data->duration ?? '4-8 hours';
-    $packageBooking->venue = $data->venue;
-    $packageBooking->guest_count = max(1, (int)($data->guest_count ?? 0));
+$packageBooking->event_date = $data->event_date;
+$packageBooking->event_time = $normalizedEventTime;
+$packageBooking->duration = $data->duration ?? '4-8 hours';
+$packageBooking->venue = $data->venue;
+$packageBooking->guest_count = max(1, (int)($data->guest_count ?? 0));
 
-    $packageBooking->customer_name = $data->customer_name;
-    $packageBooking->customer_phone = $data->customer_phone;
-    $packageBooking->customer_email = $data->customer_email;
-    $packageBooking->alternate_phone = !empty($data->alternate_phone)
-        ? $data->alternate_phone
-        : $data->customer_phone;
+$packageBooking->customer_name = $data->customer_name;
+$packageBooking->customer_phone = $data->customer_phone;
+$packageBooking->customer_email = $data->customer_email;
+$packageBooking->alternate_phone = !empty($data->alternate_phone)
+    ? $data->alternate_phone
+    : $data->customer_phone;
 
-    $method = strtolower($data->preferred_contact_method ?? 'phone');
-    if (!in_array($method, ['phone', 'email', 'whatsapp'])) {
-        $method = 'phone';
-    }
+$method = strtolower($data->preferred_contact_method ?? 'phone');
+if (!in_array($method, ['phone', 'email', 'whatsapp'])) {
+    $method = 'phone';
+}
 
-    $packageBooking->preferred_contact_method = $method;
-    $packageBooking->special_requirements = $data->special_requirements ?? '';
-    $packageBooking->estimated_price = (float)($data->estimated_price ?? 0);
+$packageBooking->preferred_contact_method = $method;
+$packageBooking->special_requirements = $data->special_requirements ?? '';
+$packageBooking->estimated_price = (float)($data->estimated_price ?? 0);
 
     $booking_ref = $packageBooking->create();
 

@@ -6,6 +6,7 @@ class PackageBooking {
     // Booking properties
     public $id;
     public $user_id;
+    public $client_id;  // ✅ ADD THIS LINE
     public $vendor_id;
     public $package_name;
     public $vendor_name;
@@ -56,34 +57,36 @@ class PackageBooking {
         $this->guest_count = max(1, (int)$this->guest_count);
 
         $query = "INSERT INTO " . $this->table_name . "
-                SET
-                    booking_reference = :booking_reference,
-                    user_id = :user_id,
-                    vendor_id = :vendor_id,
-                    package_name = :package_name,
-                    vendor_name = :vendor_name,
-                    event_type = :event_type,
-                    event_name = :event_name,
-                    event_date = :event_date,
-                    event_time = :event_time,
-                    duration = :duration,
-                    venue = :venue,
-                    guest_count = :guest_count,
-                    customer_name = :customer_name,
-                    customer_phone = :customer_phone,
-                    customer_email = :customer_email,
-                    alternate_phone = :alternate_phone,
-                    preferred_contact_method = :preferred_contact_method,
-                    special_requirements = :special_requirements,
-                    estimated_price = :estimated_price,
-                    status = :status,
-                    created_at = NOW()";
+        SET
+            booking_reference = :booking_reference,
+            user_id = :user_id,
+            client_id = :client_id,
+            vendor_id = :vendor_id,
+            package_name = :package_name,
+            vendor_name = :vendor_name,
+            event_type = :event_type,
+            event_name = :event_name,
+            event_date = :event_date,
+            event_time = :event_time,
+            duration = :duration,
+            venue = :venue,
+            guest_count = :guest_count,
+            customer_name = :customer_name,
+            customer_phone = :customer_phone,
+            customer_email = :customer_email,
+            alternate_phone = :alternate_phone,
+            preferred_contact_method = :preferred_contact_method,
+            special_requirements = :special_requirements,
+            estimated_price = :estimated_price,
+            status = :status,
+            created_at = NOW()";
 
         try {
             $stmt = $this->conn->prepare($query);
 
             // Sanitize inputs
             $this->user_id = htmlspecialchars(strip_tags($this->user_id));
+            $this->client_id = htmlspecialchars(strip_tags($this->client_id));  // ✅ ADD THIS
             $this->vendor_id = htmlspecialchars(strip_tags($this->vendor_id));
             $this->package_name = htmlspecialchars(strip_tags($this->package_name));
             $this->vendor_name = htmlspecialchars(strip_tags($this->vendor_name));
@@ -101,6 +104,7 @@ class PackageBooking {
             // Bind values
             $stmt->bindParam(":booking_reference", $this->booking_reference);
             $stmt->bindParam(":user_id", $this->user_id);
+            $stmt->bindParam(":client_id", $this->client_id);  // ✅ ADD THIS
             $stmt->bindParam(":vendor_id", $this->vendor_id);
             $stmt->bindParam(":package_name", $this->package_name);
             $stmt->bindParam(":vendor_name", $this->vendor_name);

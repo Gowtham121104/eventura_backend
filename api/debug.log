@@ -112,3 +112,42 @@ Raw input: {"customer_email":"g@gmail.com","customer_name":"gowtham","customer_p
 [14-Jan-2026 14:10:39 Europe/Berlin] Notification created successfully
 [14-Jan-2026 14:10:39 Europe/Berlin] Transaction committed
 [14-Jan-2026 14:10:39 Europe/Berlin] Response: {"success":true,"message":"Booking REJECTED successfully","data":{"id":3,"status":"REJECTED"}}
+[15-Jan-2026 16:54:25 Europe/Berlin] === Update Booking Status Request Start ===
+[15-Jan-2026 16:54:25 Europe/Berlin] User authenticated: ID=3, Type=organizer, OrganizerID=
+[15-Jan-2026 16:54:25 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":13,"remarks":"Approved"}
+[15-Jan-2026 16:54:25 Europe/Berlin] Booking ID: 13, Action: APPROVE
+[15-Jan-2026 16:54:25 Europe/Berlin] Booking found: Status=PENDING
+[15-Jan-2026 16:54:25 Europe/Berlin] Approved by: 3
+[15-Jan-2026 16:54:25 Europe/Berlin] Transaction started
+[15-Jan-2026 16:54:25 Europe/Berlin] New status: CONFIRMED
+[15-Jan-2026 16:54:25 Europe/Berlin] Booking updated successfully
+[15-Jan-2026 16:54:25 Europe/Berlin] History logged successfully
+[15-Jan-2026 16:54:25 Europe/Berlin] Notification created successfully
+[15-Jan-2026 16:54:25 Europe/Berlin] Transaction committed
+[15-Jan-2026 16:54:25 Europe/Berlin] Response: {"success":true,"message":"Booking CONFIRMED successfully","data":{"id":13,"status":"CONFIRMED"}}
+[15-Jan-2026 17:21:17 Europe/Berlin] === Update Booking Status Request Start ===
+[15-Jan-2026 17:21:17 Europe/Berlin] User authenticated: ID=3, Type=organizer, OrganizerID=
+[15-Jan-2026 17:21:17 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":1,"remarks":"Approved"}
+[15-Jan-2026 17:21:17 Europe/Berlin] Booking ID: 1, Action: APPROVE
+[15-Jan-2026 17:21:17 Europe/Berlin] Booking found: Status=PENDING
+[15-Jan-2026 17:21:17 Europe/Berlin] Approved by: 3
+[15-Jan-2026 17:21:17 Europe/Berlin] Transaction started
+[15-Jan-2026 17:21:17 Europe/Berlin] New status: CONFIRMED
+[15-Jan-2026 17:21:17 Europe/Berlin] Booking updated successfully
+[15-Jan-2026 17:21:17 Europe/Berlin] History logged successfully
+[15-Jan-2026 17:21:17 Europe/Berlin] Notification created successfully
+[15-Jan-2026 17:21:17 Europe/Berlin] Transaction committed
+[15-Jan-2026 17:21:17 Europe/Berlin] Response: {"success":true,"message":"Booking CONFIRMED successfully","data":{"id":1,"status":"CONFIRMED"}}
+[15-Jan-2026 19:19:13 Europe/Berlin] === Update Booking Status Request Start ===
+[15-Jan-2026 19:19:13 Europe/Berlin] User authenticated: ID=3, Type=organizer, OrganizerID=
+[15-Jan-2026 19:19:13 Europe/Berlin] Raw input: {"action":"REJECT","booking_id":15,"rejection_reason":"Package requirements cannot be met"}
+[15-Jan-2026 19:19:13 Europe/Berlin] Booking ID: 15, Action: REJECT
+[15-Jan-2026 19:19:13 Europe/Berlin] Booking found: Status=PENDING
+[15-Jan-2026 19:19:13 Europe/Berlin] Approved by: 3
+[15-Jan-2026 19:19:13 Europe/Berlin] Transaction started
+[15-Jan-2026 19:19:13 Europe/Berlin] New status: REJECTED
+[15-Jan-2026 19:19:13 Europe/Berlin] Booking updated successfully
+[15-Jan-2026 19:19:13 Europe/Berlin] History logged successfully
+[15-Jan-2026 19:19:13 Europe/Berlin] Notification created successfully
+[15-Jan-2026 19:19:13 Europe/Berlin] Transaction committed
+[15-Jan-2026 19:19:13 Europe/Berlin] Response: {"success":true,"message":"Booking REJECTED successfully","data":{"id":15,"status":"REJECTED"}}
