@@ -151,3 +151,104 @@ Raw input: {"customer_email":"g@gmail.com","customer_name":"gowtham","customer_p
 [15-Jan-2026 19:19:13 Europe/Berlin] Notification created successfully
 [15-Jan-2026 19:19:13 Europe/Berlin] Transaction committed
 [15-Jan-2026 19:19:13 Europe/Berlin] Response: {"success":true,"message":"Booking REJECTED successfully","data":{"id":15,"status":"REJECTED"}}
+[16-Jan-2026 17:35:22 Europe/Berlin] === Update Booking Status Request Start ===
+[16-Jan-2026 17:35:22 Europe/Berlin] User authenticated: ID=3, Type=organizer, OrganizerID=
+[16-Jan-2026 17:35:22 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":16,"remarks":"Approved"}
+[16-Jan-2026 17:35:22 Europe/Berlin] Booking ID: 16, Action: APPROVE
+[16-Jan-2026 17:35:22 Europe/Berlin] Booking found: Status=PENDING
+[16-Jan-2026 17:35:22 Europe/Berlin] Approved by: 3
+[16-Jan-2026 17:35:22 Europe/Berlin] Transaction started
+[16-Jan-2026 17:35:22 Europe/Berlin] New status: CONFIRMED
+[16-Jan-2026 17:35:22 Europe/Berlin] Booking updated successfully
+[16-Jan-2026 17:35:22 Europe/Berlin] History logged successfully
+[16-Jan-2026 17:35:22 Europe/Berlin] Notification created successfully
+[16-Jan-2026 17:35:22 Europe/Berlin] Transaction committed
+[16-Jan-2026 17:35:22 Europe/Berlin] Response: {"success":true,"message":"Booking CONFIRMED successfully","data":{"id":16,"status":"CONFIRMED"}}
+Request received at: 2026-01-16 18:35:41
+Raw input: {"client_id":1,"customer_email":"gowthi@gmail.com","customer_name":"Gowtham","customer_phone":"9384742451","duration":"4-8 hours","estimated_price":937.5,"event_date":"2026-01-17","event_name":"Get together","event_time":"20:00:00","event_type":"PARTY","guest_count":100,"preferred_contact_method":"PHONE","service_name":"Catering","special_requirements":"Quality of food should be awesome ","user_id":1,"vendor_id":1,"vendor_name":"Royal Feast Caterers","venue":"VGP"}
+=== NEW REQUEST ===
+Request received at: 2026-01-16 19:07:01
+Raw input: {"client_id":1,"customer_email":"gowthi@gmail.com","customer_name":"Gowtham","customer_phone":"9384742451","duration":"4-8 hours","estimated_price":937.5,"event_date":"2026-01-17","event_name":"Get together","event_time":"20:00:00","event_type":"PARTY","guest_count":100,"preferred_contact_method":"PHONE","service_name":"Catering","special_requirements":"Quality of food should be awesome ","user_id":1,"vendor_id":1,"vendor_name":"Royal Feast Caterers","venue":"VGP"}
+Headers: {"Content-Type":"application\/json; charset=UTF-8","Content-Length":"469","Host":"10.0.2.2","Connection":"Keep-Alive","Accept-Encoding":"gzip","User-Agent":"okhttp\/4.12.0"}
+Extracted token: NULL
+❌ Authorization header missing
+=== NEW REQUEST ===
+Request received at: 2026-01-16 19:20:14
+Raw input: {"client_id":1,"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"9384742451","duration":"4-8 hours","estimated_price":937.5,"event_date":"2026-01-22","event_name":"Get together ","event_time":"16:00:00","event_type":"PARTY","guest_count":100,"preferred_contact_method":"PHONE","service_name":"Catering","user_id":1,"vendor_id":1,"vendor_name":"Royal Feast Caterers","venue":"VGP"}
+Headers: {"Content-Type":"application\/json; charset=UTF-8","Content-Length":"405","Host":"10.0.2.2","Connection":"Keep-Alive","Accept-Encoding":"gzip","User-Agent":"okhttp\/4.12.0"}
+Extracted token: NULL
+❌ Authorization header missing
+=== NEW REQUEST ===
+Request received at: 2026-01-16 19:25:44
+Raw input: {"client_id":1,"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"9384742451","duration":"4-8 hours","estimated_price":937.5,"event_date":"2026-01-20","event_name":"Get together","event_time":"18:00:00","event_type":"PARTY","guest_count":100,"preferred_contact_method":"PHONE","service_name":"Catering","user_id":1,"vendor_id":1,"vendor_name":"Royal Feast Caterers","venue":"VGP"}
+Headers: {"Content-Type":"application\/json; charset=UTF-8","Content-Length":"404","Host":"10.0.2.2","Connection":"Keep-Alive","Accept-Encoding":"gzip","User-Agent":"okhttp\/4.12.0"}
+Extracted token: NULL
+❌ Authorization header missing
+=== NEW REQUEST ===
+Request received at: 2026-01-16 19:32:17
+Raw input: {"client_id":1,"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"9384742451","duration":"4-8 hours","estimated_price":937.5,"event_date":"2026-01-20","event_name":"Get together","event_time":"18:00:00","event_type":"PARTY","guest_count":100,"preferred_contact_method":"PHONE","service_name":"Catering","user_id":1,"vendor_id":1,"vendor_name":"Royal Feast Caterers","venue":"VGP"}
+Headers: {"Content-Type":"application\/json; charset=UTF-8","Content-Length":"404","Host":"10.0.2.2","Connection":"Keep-Alive","Accept-Encoding":"gzip","User-Agent":"okhttp\/4.12.0"}
+Extracted token: NULL
+❌ Authorization header missing
+=== NEW REQUEST ===
+Request received at: 2026-01-16 19:37:23
+Raw input: {"client_id":1,"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"9384742451","duration":"4-8 hours","estimated_price":937.5,"event_date":"2026-01-22","event_name":"Get together","event_time":"19:00:00","event_type":"PARTY","guest_count":100,"preferred_contact_method":"PHONE","service_name":"Catering","user_id":1,"vendor_id":1,"vendor_name":"Royal Feast Caterers","venue":"Vgp"}
+Headers: {"Content-Type":"application\/json; charset=UTF-8","Content-Length":"404","Host":"10.0.2.2","Connection":"Keep-Alive","Accept-Encoding":"gzip","User-Agent":"okhttp\/4.12.0"}
+Extracted token: NULL
+❌ Authorization header missing
+=== NEW REQUEST ===
+Request received at: 2026-01-16 19:38:34
+Raw input: {"client_id":1,"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"9384742451","duration":"4-8 hours","estimated_price":937.5,"event_date":"2026-01-22","event_name":"Get together","event_time":"19:00:00","event_type":"PARTY","guest_count":100,"preferred_contact_method":"PHONE","service_name":"Catering","user_id":1,"vendor_id":1,"vendor_name":"Royal Feast Caterers","venue":"Vgp"}
+Headers: {"Content-Type":"application\/json; charset=UTF-8","Content-Length":"404","Host":"10.0.2.2","Connection":"Keep-Alive","Accept-Encoding":"gzip","User-Agent":"okhttp\/4.12.0"}
+Extracted token: NULL
+❌ Authorization header missing
+=== NEW REQUEST ===
+Request received at: 2026-01-16 19:39:27
+Raw input: {"client_id":1,"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"9384742451","duration":"4-8 hours","estimated_price":937.5,"event_date":"2026-01-22","event_name":"Get together","event_time":"19:00:00","event_type":"PARTY","guest_count":100,"preferred_contact_method":"PHONE","service_name":"Catering","user_id":1,"vendor_id":1,"vendor_name":"Royal Feast Caterers","venue":"Vgp"}
+Headers: {"Content-Type":"application\/json; charset=UTF-8","Content-Length":"404","Host":"10.0.2.2","Connection":"Keep-Alive","Accept-Encoding":"gzip","User-Agent":"okhttp\/4.12.0"}
+Extracted token: NULL
+❌ Authorization header missing
+=== NEW REQUEST ===
+Request received at: 2026-01-16 19:42:45
+Raw input: {"client_id":1,"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"9384742451","duration":"4-8 hours","estimated_price":937.5,"event_date":"2026-01-20","event_name":"Get together","event_time":"19:00:00","event_type":"PARTY","guest_count":100,"preferred_contact_method":"PHONE","service_name":"Catering","user_id":1,"vendor_id":1,"vendor_name":"Royal Feast Caterers","venue":"VGP"}
+Headers: {"Authorization":"Bearer ef088e7a82d495407bb3a0742e58d73381b244ed847875af4ba0ea2cdd495174","Content-Type":"application\/json; charset=UTF-8","Content-Length":"404","Host":"10.0.2.2","Connection":"Keep-Alive","Accept-Encoding":"gzip","User-Agent":"okhttp\/4.12.0"}
+Extracted token: EXISTS (length: 64)
+User found: YES (ID: 1, Role: client)
+✅ Authenticated user ID: 1
+Creating booking for user ID: 1
+❌ Database error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'package_name' cannot be null
+[16-Jan-2026 19:47:27 Europe/Berlin] === Update Booking Status Request Start ===
+[16-Jan-2026 19:47:27 Europe/Berlin] User authenticated: ID=3, Type=organizer, OrganizerID=
+[16-Jan-2026 19:47:27 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":17,"remarks":"Approved"}
+[16-Jan-2026 19:47:27 Europe/Berlin] Booking ID: 17, Action: APPROVE
+[16-Jan-2026 19:47:27 Europe/Berlin] Booking found: Status=PENDING
+[16-Jan-2026 19:47:27 Europe/Berlin] Approved by: 3
+[16-Jan-2026 19:47:27 Europe/Berlin] Transaction started
+[16-Jan-2026 19:47:27 Europe/Berlin] New status: CONFIRMED
+[16-Jan-2026 19:47:27 Europe/Berlin] Booking updated successfully
+[16-Jan-2026 19:47:27 Europe/Berlin] History logged successfully
+[16-Jan-2026 19:47:27 Europe/Berlin] Notification created successfully
+[16-Jan-2026 19:47:27 Europe/Berlin] Transaction committed
+[16-Jan-2026 19:47:27 Europe/Berlin] Response: {"success":true,"message":"Booking CONFIRMED successfully","data":{"id":17,"status":"CONFIRMED"}}
+=== NEW REQUEST ===
+Request received at: 2026-01-17 13:54:50
+Raw input: {"client_id":1,"customer_email":"g@gmail.com","customer_name":"Gowtham","customer_phone":"9638520741","duration":"4-8 hours","estimated_price":937.5,"event_date":"2026-01-24","event_name":"Get together","event_time":"18:00:00","event_type":"PARTY","guest_count":100,"preferred_contact_method":"PHONE","service_name":"Catering","user_id":1,"vendor_id":1,"vendor_name":"Royal Feast Caterers","venue":"VGP"}
+Headers: {"Authorization":"Bearer 2309628951a9b7274089dac681b577760853584bd0e93c71677856c1ed22d5db","Content-Type":"application\/json; charset=UTF-8","Content-Length":"404","Host":"10.0.2.2","Connection":"Keep-Alive","Accept-Encoding":"gzip","User-Agent":"okhttp\/4.12.0"}
+Extracted token: EXISTS (length: 64)
+User found: YES (ID: 1, Role: client)
+✅ Authenticated user ID: 1
+Creating booking for user ID: 1
+✅ Booking created with ID: 18
+[17-Jan-2026 13:55:39 Europe/Berlin] === Update Booking Status Request Start ===
+[17-Jan-2026 13:55:39 Europe/Berlin] User authenticated: ID=3, Type=organizer, OrganizerID=
+[17-Jan-2026 13:55:40 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":18,"remarks":"Approved"}
+[17-Jan-2026 13:55:40 Europe/Berlin] Booking ID: 18, Action: APPROVE
+[17-Jan-2026 13:55:40 Europe/Berlin] Booking found: Status=PENDING
+[17-Jan-2026 13:55:40 Europe/Berlin] Approved by: 3
+[17-Jan-2026 13:55:40 Europe/Berlin] Transaction started
+[17-Jan-2026 13:55:40 Europe/Berlin] New status: CONFIRMED
+[17-Jan-2026 13:55:40 Europe/Berlin] Booking updated successfully
+[17-Jan-2026 13:55:40 Europe/Berlin] History logged successfully
+[17-Jan-2026 13:55:40 Europe/Berlin] Notification created successfully
+[17-Jan-2026 13:55:40 Europe/Berlin] Transaction committed
+[17-Jan-2026 13:55:40 Europe/Berlin] Response: {"success":true,"message":"Booking CONFIRMED successfully","data":{"id":18,"status":"CONFIRMED"}}

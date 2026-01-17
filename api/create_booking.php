@@ -8,6 +8,7 @@ ini_set('error_log', __DIR__ . '/php_error.log');
 
 file_put_contents(
     __DIR__ . '/debug.log',
+    "=== NEW REQUEST ===" . PHP_EOL .
     "Request received at: " . date('Y-m-d H:i:s') . PHP_EOL,
     FILE_APPEND
 );
@@ -34,9 +35,65 @@ include_once __DIR__ . '/../config/database.php';
 $database = new Database();
 $db = $database->getConnection();
 
-// ✅ GET USER ID FROM TOKEN
-$headers = getallheaders();
-if (empty($headers['Authorization'])) {
+// ✅ IMPROVED TOKEN EXTRACTION - handles different server configurations
+function getBearerToken() {
+    $headers = null;
+    
+    // Try different methods to get headers
+    if (function_exists('getallheaders')) {
+        $headers = getallheaders();
+    } elseif (function_exists('apache_request_headers')) {
+        $headers = apache_request_headers();
+    } else {
+        // Fallback for nginx/other servers
+        $headers = array();
+        foreach ($_SERVER as $name => $value) {
+            if (substr($name, 0, 5) == 'HTTP_') {
+                $headers[str_replace(' ', '-', ucwords(strtolower(str_replace('_', ' ', substr($name, 5)))))] = $value;
+            }
+        }
+    }
+    
+    // Log all headers for debugging
+    file_put_contents(
+        __DIR__ . '/debug.log',
+        "Headers: " . json_encode($headers) . PHP_EOL,
+        FILE_APPEND
+    );
+    
+    // Check Authorization header (case-insensitive)
+    if (isset($headers['Authorization'])) {
+        $authHeader = $headers['Authorization'];
+    } elseif (isset($headers['authorization'])) {
+        $authHeader = $headers['authorization'];
+    } elseif (isset($_SERVER['HTTP_AUTHORIZATION'])) {
+        $authHeader = $_SERVER['HTTP_AUTHORIZATION'];
+    } else {
+        return null;
+    }
+    
+    // Extract token
+    if (preg_match('/Bearer\s+(.*)$/i', $authHeader, $matches)) {
+        return $matches[1];
+    }
+    
+    return str_replace('Bearer ', '', $authHeader);
+}
+
+$token = getBearerToken();
+
+file_put_contents(
+    __DIR__ . '/debug.log',
+    "Extracted token: " . ($token ? "EXISTS (length: " . strlen($token) . ")" : "NULL") . PHP_EOL,
+    FILE_APPEND
+);
+
+if (empty($token)) {
+    file_put_contents(
+        __DIR__ . '/debug.log',
+        "❌ Authorization header missing" . PHP_EOL,
+        FILE_APPEND
+    );
     http_response_code(401);
     ob_clean();
     echo json_encode([
@@ -45,8 +102,6 @@ if (empty($headers['Authorization'])) {
     ]);
     exit;
 }
-
-$token = str_replace('Bearer ', '', $headers['Authorization']);
 
 // Validate token and get user
 $userQuery = "SELECT u.id, u.role FROM users u 
@@ -57,7 +112,18 @@ $userStmt->bindParam(':token', $token);
 $userStmt->execute();
 $user = $userStmt->fetch(PDO::FETCH_ASSOC);
 
+file_put_contents(
+    __DIR__ . '/debug.log',
+    "User found: " . ($user ? "YES (ID: {$user['id']}, Role: {$user['role']})" : "NO") . PHP_EOL,
+    FILE_APPEND
+);
+
 if (!$user) {
+    file_put_contents(
+        __DIR__ . '/debug.log',
+        "❌ Invalid or expired token" . PHP_EOL,
+        FILE_APPEND
+    );
     http_response_code(401);
     ob_clean();
     echo json_encode([
@@ -68,6 +134,12 @@ if (!$user) {
 }
 
 $userId = $user['id']; // ✅ Authenticated user ID
+
+file_put_contents(
+    __DIR__ . '/debug.log',
+    "✅ Authenticated user ID: " . $userId . PHP_EOL,
+    FILE_APPEND
+);
 
 $data = json_decode($rawInput);
 
@@ -97,6 +169,12 @@ if (
         if (!in_array($bookingType, $validTypes)) {
             throw new Exception('Invalid booking_type. Must be: event, service, or package');
         }
+
+        file_put_contents(
+            __DIR__ . '/debug.log',
+            "Creating booking for user ID: " . $userId . PHP_EOL,
+            FILE_APPEND
+        );
 
         // Check for duplicate pending bookings
         $duplicateCheck = "SELECT id FROM bookings 
@@ -241,6 +319,12 @@ if (
         if ($stmt->execute()) {
             $bookingId = $db->lastInsertId();
 
+            file_put_contents(
+                __DIR__ . '/debug.log',
+                "✅ Booking created with ID: " . $bookingId . PHP_EOL,
+                FILE_APPEND
+            );
+
             $historyQuery = "INSERT INTO booking_status_history (
                 booking_id, old_status, new_status, changed_by, remarks
             ) VALUES (
@@ -296,6 +380,11 @@ if (
 
     } catch (PDOException $e) {
         error_log("Database error in create_booking.php: " . $e->getMessage());
+        file_put_contents(
+            __DIR__ . '/debug.log',
+            "❌ Database error: " . $e->getMessage() . PHP_EOL,
+            FILE_APPEND
+        );
         http_response_code(500);
         ob_clean();
         echo json_encode([
@@ -304,6 +393,11 @@ if (
         ]);
         exit;
     } catch (Exception $e) {
+        file_put_contents(
+            __DIR__ . '/debug.log',
+            "❌ Exception: " . $e->getMessage() . PHP_EOL,
+            FILE_APPEND
+        );
         http_response_code(400);
         ob_clean();
         echo json_encode([

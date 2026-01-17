@@ -89,3 +89,4 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in C:\xampp\htdocs\eventura_api\api\admin\get_pending_bookings.php on line 35
+[16-Jan-2026 19:42:45 Europe/Berlin] Database error in create_booking.php: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'package_name' cannot be null
