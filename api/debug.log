@@ -252,3 +252,63 @@ Creating booking for user ID: 1
 [17-Jan-2026 13:55:40 Europe/Berlin] Notification created successfully
 [17-Jan-2026 13:55:40 Europe/Berlin] Transaction committed
 [17-Jan-2026 13:55:40 Europe/Berlin] Response: {"success":true,"message":"Booking CONFIRMED successfully","data":{"id":18,"status":"CONFIRMED"}}
+=== NEW REQUEST ===
+Request received at: 2026-01-18 12:55:26
+Raw input: {"client_id":1,"customer_email":"s@gmail.com","customer_name":"Sanjay","customer_phone":"9741025863","duration":"6-8 hours","estimated_price":33750.0,"event_date":"2026-01-19","event_name":"Product launch","event_time":"18:00:00","event_type":"CORPORATE","guest_count":120,"preferred_contact_method":"PHONE","service_name":"Photography","user_id":1,"vendor_id":1,"vendor_name":"Capture Moments Studio","venue":"AVM"}
+Headers: {"Authorization":"Bearer 221e8de5bf0ccf9dfb5a2ba9cb79b65765da4dffae7b191ae96f60f0183d52ff","Content-Type":"application\/json; charset=UTF-8","Content-Length":"416","Host":"10.0.2.2","Connection":"Keep-Alive","Accept-Encoding":"gzip","User-Agent":"okhttp\/4.12.0"}
+Extracted token: EXISTS (length: 64)
+User found: YES (ID: 1, Role: client)
+✅ Authenticated user ID: 1
+Creating booking for user ID: 1
+✅ Booking created with ID: 19
+=== NEW REQUEST ===
+Request received at: 2026-01-28 15:49:01
+Raw input: {"client_id":1,"customer_email":"g@gmail.com","customer_name":"Hari","customer_phone":"9384746125","duration":"4-8 hours","estimated_price":20700.0,"event_date":"2026-01-30","event_name":"Weekend Party","event_time":"19:00:00","event_type":"CORPORATE","guest_count":30,"preferred_contact_method":"PHONE","service_name":"DJ/Music","special_requirements":"Good Sound Effect","user_id":1,"vendor_id":1,"vendor_name":"Beat Masters DJ","venue":"ZOLO"}
+Headers: {"Authorization":"Bearer 1ecd05a794efcbf7a0e49b5da5e96cf295269bdc46a9c5c074bbd9feef16e688","Content-Type":"application\/json; charset=UTF-8","Content-Length":"446","Host":"10.0.2.2","Connection":"Keep-Alive","Accept-Encoding":"gzip","User-Agent":"okhttp\/4.12.0"}
+Extracted token: EXISTS (length: 64)
+User found: YES (ID: 1, Role: client)
+✅ Authenticated user ID: 1
+Creating booking for user ID: 1
+✅ Booking created with ID: 21
+[28-Jan-2026 15:50:40 Europe/Berlin] === Update Booking Status Request Start ===
+[28-Jan-2026 15:50:40 Europe/Berlin] PHP Warning:  Undefined array key "user_type" in C:\xampp\htdocs\eventura_api\api\admin\update_booking_status.php on line 22
+[28-Jan-2026 15:50:40 Europe/Berlin] User authenticated: ID=3, Type=, OrganizerID=1
+[28-Jan-2026 15:50:40 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":21,"remarks":"Approved"}
+[28-Jan-2026 15:50:40 Europe/Berlin] Booking ID: 21, Action: APPROVE
+[28-Jan-2026 15:50:40 Europe/Berlin] Booking found: Status=PENDING
+[28-Jan-2026 15:50:40 Europe/Berlin] Approved by: 3
+[28-Jan-2026 15:50:40 Europe/Berlin] Transaction started
+[28-Jan-2026 15:50:40 Europe/Berlin] New status: CONFIRMED
+[28-Jan-2026 15:50:40 Europe/Berlin] Booking updated successfully
+[28-Jan-2026 15:50:40 Europe/Berlin] History logged successfully
+[28-Jan-2026 15:50:40 Europe/Berlin] Notification created successfully
+[28-Jan-2026 15:50:40 Europe/Berlin] Transaction committed
+[28-Jan-2026 15:50:40 Europe/Berlin] Response: {"success":true,"message":"Booking CONFIRMED successfully","data":{"id":21,"status":"CONFIRMED"}}
+[28-Jan-2026 15:50:44 Europe/Berlin] === Update Booking Status Request Start ===
+[28-Jan-2026 15:50:44 Europe/Berlin] PHP Warning:  Undefined array key "user_type" in C:\xampp\htdocs\eventura_api\api\admin\update_booking_status.php on line 22
+[28-Jan-2026 15:50:44 Europe/Berlin] User authenticated: ID=3, Type=, OrganizerID=1
+[28-Jan-2026 15:50:44 Europe/Berlin] Raw input: {"action":"APPROVE","booking_id":20,"remarks":"Approved"}
+[28-Jan-2026 15:50:44 Europe/Berlin] Booking ID: 20, Action: APPROVE
+[28-Jan-2026 15:50:44 Europe/Berlin] Booking found: Status=PENDING
+[28-Jan-2026 15:50:44 Europe/Berlin] Approved by: 3
+[28-Jan-2026 15:50:44 Europe/Berlin] Transaction started
+[28-Jan-2026 15:50:44 Europe/Berlin] New status: CONFIRMED
+[28-Jan-2026 15:50:44 Europe/Berlin] Booking updated successfully
+[28-Jan-2026 15:50:44 Europe/Berlin] History logged successfully
+[28-Jan-2026 15:50:44 Europe/Berlin] Notification created successfully
+[28-Jan-2026 15:50:44 Europe/Berlin] Transaction committed
+[28-Jan-2026 15:50:44 Europe/Berlin] Response: {"success":true,"message":"Booking CONFIRMED successfully","data":{"id":20,"status":"CONFIRMED"}}
+[28-Jan-2026 15:50:57 Europe/Berlin] === Update Booking Status Request Start ===
+[28-Jan-2026 15:50:57 Europe/Berlin] PHP Warning:  Undefined array key "user_type" in C:\xampp\htdocs\eventura_api\api\admin\update_booking_status.php on line 22
+[28-Jan-2026 15:50:57 Europe/Berlin] User authenticated: ID=3, Type=, OrganizerID=1
+[28-Jan-2026 15:50:57 Europe/Berlin] Raw input: {"action":"REJECT","booking_id":19,"rejection_reason":"Date already fully booked"}
+[28-Jan-2026 15:50:57 Europe/Berlin] Booking ID: 19, Action: REJECT
+[28-Jan-2026 15:50:57 Europe/Berlin] Booking found: Status=PENDING
+[28-Jan-2026 15:50:57 Europe/Berlin] Approved by: 3
+[28-Jan-2026 15:50:57 Europe/Berlin] Transaction started
+[28-Jan-2026 15:50:57 Europe/Berlin] New status: REJECTED
+[28-Jan-2026 15:50:57 Europe/Berlin] Booking updated successfully
+[28-Jan-2026 15:50:57 Europe/Berlin] History logged successfully
+[28-Jan-2026 15:50:57 Europe/Berlin] Notification created successfully
+[28-Jan-2026 15:50:57 Europe/Berlin] Transaction committed
+[28-Jan-2026 15:50:57 Europe/Berlin] Response: {"success":true,"message":"Booking REJECTED successfully","data":{"id":19,"status":"REJECTED"}}
